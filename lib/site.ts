@@ -6,12 +6,38 @@
  * place it appears.
  */
 
+const FALLBACK_URL = "https://drorklar.com";
+
+/**
+ * Resolves the public site URL from the environment.
+ *
+ * `??` alone is not enough: an env var that is present but empty (which is how
+ * an unset value arrives on some hosts, Vercel included) is a string, so it
+ * passes through and then throws `ERR_INVALID_URL` in `new URL()` at module
+ * evaluation, failing the build. Anything blank, malformed, or missing a
+ * protocol is normalised here instead.
+ */
+function resolveSiteUrl(): string {
+  const raw = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+  if (!raw) return FALLBACK_URL;
+
+  // Accept a bare domain ("drorklar.com") as well as a full URL.
+  const candidate = /^https?:\/\//i.test(raw) ? raw : `https://${raw}`;
+
+  try {
+    // Drop any trailing slash so `${site.url}/privacy` never doubles up.
+    return new URL(candidate).origin;
+  } catch {
+    return FALLBACK_URL;
+  }
+}
+
 export const site = {
   name: "Dror Klar",
   brand: "Dror Klar Digital Marketing",
   role: "Digital Marketing Specialist",
-  // Falls back to the production domain when the env var is not set.
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://drorklar.com",
+  // Always a valid absolute origin, with no trailing slash.
+  url: resolveSiteUrl(),
 
   title: "Dror Klar | Digital Marketing Specialist",
   description:

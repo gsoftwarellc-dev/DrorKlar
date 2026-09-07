@@ -20,7 +20,7 @@ export default function PrivacyPage() {
   return (
     <LegalPage
       title="Privacy Policy"
-      updated="January 1, 2026"
+      updated="June 17, 2026"
       intro={
         <p>
           This Privacy Policy explains how I, Dror Klar, an independent digital

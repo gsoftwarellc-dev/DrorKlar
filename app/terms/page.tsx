@@ -20,7 +20,7 @@ export default function TermsPage() {
   return (
     <LegalPage
       title="Terms"
-      updated="January 1, 2026"
+      updated="June 17, 2026"
       intro={
         <p>
           These Terms govern your use of {site.url.replace("https://", "")} and
