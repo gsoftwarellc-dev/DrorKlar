@@ -1,26 +1,128 @@
 @import "tailwindcss";
 
+/* ==========================================================================
+   Dror Klar — Design tokens
+   Strict palette: white #ffffff / black #000000 + neutral greys derived from
+   black at low opacity. No gradients anywhere in this stylesheet.
+   ========================================================================== */
+
+@theme {
+  /* Pure brand black/white. These override Tailwind's defaults (#000 / #fff)
+     so every `text-black` / `bg-black` resolves to the exact 6-digit value. */
+  --color-black: #000000;
+  --color-white: #ffffff;
+
+  --color-ink: #000000;
+  --color-paper: #ffffff;
+
+  /* Neutral scale — flat greys, used for borders, muted copy, panel fills */
+  --color-neutral-50: #fafafa;
+  --color-neutral-100: #f4f4f5;
+  --color-neutral-200: #e6e6e7;
+  --color-neutral-300: #d3d3d5;
+  --color-neutral-400: #a1a1a6;
+  --color-neutral-500: #71717a;
+  --color-neutral-600: #52525b;
+  --color-neutral-700: #3f3f46;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* Soft, low-spread shadows — premium, never heavy */
+  --shadow-soft: 0 1px 2px rgb(0 0 0 / 0.04), 0 8px 24px -12px rgb(0 0 0 / 0.12);
+  --shadow-lift: 0 1px 2px rgb(0 0 0 / 0.05), 0 18px 40px -20px rgb(0 0 0 / 0.22);
+  --shadow-frame: 0 2px 4px rgb(0 0 0 / 0.03), 0 40px 80px -40px rgb(0 0 0 / 0.28);
+}
+
+/* Locked light appearance: the brand is white paper + black ink only. */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Anchor offset so sticky nav never covers a section heading */
+section[id],
+div[id].scroll-anchor {
+  scroll-margin-top: 6rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Visible, on-brand focus ring for keyboard users */
+:focus-visible {
+  outline: 2px solid #000000;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   Reveal-on-scroll. Elements start slightly offset and settle once observed.
+   Without JS (or with reduced motion) everything renders fully visible.
+   -------------------------------------------------------------------------- */
+/* Content is visible by default; `html.js` (rendered server-side in the layout)
+   opts into the hidden-then-revealed treatment. A <noscript> override in the
+   layout neutralises this when scripting is unavailable, so content is never
+   left hidden by CSS that nothing can undo. */
+.reveal {
+  opacity: 1;
+  transform: none;
+}
+
+.js .reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.js .reveal[data-visible="true"] {
+  opacity: 1;
+  transform: none;
+}
+
+/* Printing should never lose content to an un-fired observer. */
+@media print {
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Reduced motion: show everything immediately, no transition. */
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Fine dot grid used behind the portrait — flat, not a gradient */
+.dot-grid {
+  background-image: radial-gradient(#000000 1px, transparent 1px);
+  background-size: 16px 16px;
+  opacity: 0.07;
+}
+
+/* Selection matches the brand */
+::selection {
+  background-color: #000000;
+  color: #ffffff;
 }
