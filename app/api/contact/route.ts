@@ -6,7 +6,7 @@ import {
   validateContact,
   type ContactFormValues,
 } from "@/lib/validation";
-import { serviceOptions, site } from "@/lib/site";
+import { serviceOptions, site, SMS_CONSENT_LABEL } from "@/lib/site";
 
 /**
  * Contact form endpoint.
@@ -125,13 +125,20 @@ export async function POST(request: Request) {
      Only present when the visitor explicitly ticked the checkbox. The
      timestamp is generated on the server so it cannot be spoofed by a client.
      A phone number on its own is NOT consent — consent requires this flag.
+
+     `smsConsentPhone` records the number the consent was given for, so an
+     opt-in can always be tied to the exact number it authorises (10DLC
+     audits ask for this). Validation guarantees it is non-empty whenever
+     smsConsent is true.
      --------------------------------------------------------------------- */
   const smsConsentRecord = values.smsConsent
     ? {
         smsConsent: true as const,
+        smsConsentPhone: values.phone,
         smsConsentTimestamp: new Date().toISOString(),
         smsConsentSource: "website-contact-form",
         smsDisclosureVersion: site.smsDisclosureVersion,
+        smsConsentText: SMS_CONSENT_LABEL,
         smsConsentIp: ip,
       }
     : { smsConsent: false as const };

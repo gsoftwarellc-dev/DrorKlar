@@ -93,7 +93,7 @@ export default function Navbar() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="relative rounded-md px-3.5 py-2 text-[0.9375rem] text-neutral-600 transition-colors duration-200 hover:text-black"
+                  className="relative rounded-md px-3.5 py-2 text-base font-medium text-black transition-colors duration-200 hover:opacity-70"
                 >
                   {link.label}
                 </Link>

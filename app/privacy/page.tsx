@@ -76,15 +76,19 @@ export default function PrivacyPage() {
         list. It is a request for me to reply to your inquiry.
       </p>
       <p>
-        Only your name, email address, and message are required. Every other
-        field, including the phone number field, is optional and may be left
-        blank without affecting your ability to send an inquiry.
+        Only your name, email address, and message are required to send an
+        inquiry. Every other field may be left blank. A phone number is
+        required only if you choose to opt in to SMS messages, so that the
+        consent is tied to the number it applies to; if you do not opt in, you
+        can send an inquiry without giving a phone number at all.
       </p>
 
       <h2 id="phone-numbers-and-sms">Phone Numbers and SMS Communications</h2>
       <p>
-        Providing a phone number in the contact form is optional, and doing so
-        by itself does not opt you in to text messages.
+        Providing a phone number by itself does not opt you in to text
+        messages. The phone field is only required when you tick the SMS
+        consent box, because a consent record must identify the number the
+        consent covers.
       </p>
       <p>
         SMS consent is a separate, explicit choice. The SMS consent checkbox on
@@ -94,9 +98,10 @@ export default function PrivacyPage() {
         that box or otherwise given me applicable consent directly.
       </p>
       <p>
-        When you provide SMS consent, I record that you consented, the date and
-        time of consent, and the version of the disclosure you agreed to, so
-        that the consent can be verified later.
+        When you provide SMS consent, I record that you consented, the mobile
+        number the consent applies to, the date and time of consent, and the
+        exact disclosure text and version you agreed to, so that the consent
+        can be verified later.
       </p>
       <p>
         <strong>
@@ -192,8 +197,8 @@ export default function PrivacyPage() {
           am required to keep.
         </li>
         <li>
-          <strong>Optional fields.</strong> You can simply leave optional fields
-          such as your phone number blank.
+          <strong>Optional fields.</strong> You can leave optional fields blank,
+          including your phone number, as long as you are not opting in to SMS.
         </li>
       </ul>
       <p>

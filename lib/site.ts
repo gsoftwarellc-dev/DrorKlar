@@ -51,7 +51,7 @@ export const site = {
 
   // Version stamp recorded alongside SMS consent. Bump this string whenever the
   // consent language below is edited, so stored records stay auditable.
-  smsDisclosureVersion: "2026-01-sms-v1",
+  smsDisclosureVersion: "2026-09-sms-v2",
 } as const;
 
 export const navLinks = [
@@ -63,7 +63,7 @@ export const navLinks = [
 ] as const;
 
 export const SMS_CONSENT_LABEL =
-  "I agree to receive SMS text messages from Dror Klar regarding my inquiry and requested services. Message frequency may vary. Message and data rates may apply. Reply STOP to opt out or HELP for assistance. Consent is not a condition of purchase.";
+  "I agree to receive SMS messages from Dror Klar regarding my inquiry, updates, and customer support. Message frequency may vary. Message and data rates may apply. Reply STOP to opt out or HELP for assistance. Consent is not a condition of purchase.";
 
 export const services = [
   {

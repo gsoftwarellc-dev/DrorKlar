@@ -276,9 +276,14 @@ export default function ContactForm() {
           <FieldError id="website-error" message={errors.website} />
         </div>
 
-        {/* Phone — OPTIONAL. Never required to submit. */}
+        {/* Phone — optional for a plain inquiry, required once SMS consent is
+            ticked so the consent always names the number it applies to. */}
         <div>
-          <FieldLabel htmlFor="phone" optional>
+          <FieldLabel
+            htmlFor="phone"
+            required={values.smsConsent}
+            optional={!values.smsConsent}
+          >
             Phone Number
           </FieldLabel>
           <TextInput
@@ -291,6 +296,7 @@ export default function ContactForm() {
             value={values.phone}
             onChange={(e) => update("phone", e.target.value)}
             invalid={Boolean(errors.phone)}
+            aria-required={values.smsConsent}
             aria-invalid={Boolean(errors.phone)}
             aria-describedby={
               errors.phone ? "phone-error phone-hint" : "phone-hint"
@@ -300,7 +306,9 @@ export default function ContactForm() {
           />
           <FieldError id="phone-error" message={errors.phone} />
           <p id="phone-hint" className="mt-2 text-[0.75rem] leading-relaxed text-black">
-            Providing a phone number does not opt you in to text messages.
+            {values.smsConsent
+              ? "SMS messages will be sent to this number."
+              : "Providing a phone number does not opt you in to text messages."}
           </p>
         </div>
 

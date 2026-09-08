@@ -133,10 +133,11 @@ export default function TermsPage() {
           checkbox on my contact form. The checkbox is never pre-selected.
         </li>
         <li>
-          <strong>What messages cover.</strong> Depending on the consent
-          provided, messages may concern your inquiry, a service you requested,
-          follow-up on a conversation you began with me, scheduling, or related
-          communications.
+          <strong>What messages cover.</strong> Messages relate to your
+          inquiry, updates on it, and customer support &mdash; for example
+          replying to a question you sent, following up on a conversation you
+          began with me, or arranging a call. These are conversational and
+          customer-care messages, not marketing blasts.
         </li>
         <li>
           <strong>Message frequency.</strong> Message frequency may vary.
@@ -163,6 +164,11 @@ export default function TermsPage() {
           or undelivered messages, and delivery is not guaranteed.
         </li>
       </ul>
+      <p>
+        Consent is recorded against the specific mobile number entered on the
+        contact form at the time consent is given, and messages are sent only
+        to that number.
+      </p>
       <p>
         I only message people who gave consent directly to me. I do not treat
         contacts obtained from purchased, rented, scraped, or third-party lead

@@ -77,8 +77,10 @@ export function isValidEmail(value: string): boolean {
 }
 
 /**
- * Phone is OPTIONAL everywhere. When supplied it must merely look like a
- * plausible phone number (7–15 digits, per E.164's practical range).
+ * Phone is optional for a plain inquiry, and REQUIRED when SMS consent is
+ * given — the number collected here is the number the consent applies to.
+ * When supplied it must look like a plausible phone number (7–15 digits, per
+ * E.164's practical range).
  */
 export function isValidPhone(value: string): boolean {
   if (!value) return true;
@@ -98,8 +100,9 @@ export function isValidWebsite(value: string): boolean {
  * Validates a submission. Returns field-keyed messages; an empty object means
  * the submission is valid.
  *
- * Note: `smsConsent` is never required. A visitor can always submit the form
- * without opting in to SMS.
+ * Note: `smsConsent` is never required — a visitor can always submit the form
+ * without opting in to SMS. The only coupling is the reverse: opting IN
+ * requires a phone number, so consent always names the number it applies to.
  */
 export function validateContact(values: ContactFormValues): ContactErrors {
   const errors: ContactErrors = {};
@@ -120,8 +123,14 @@ export function validateContact(values: ContactFormValues): ContactErrors {
     errors.website = "Please enter a valid website address.";
   }
 
-  // Optional field: only validated when the visitor actually typed something.
-  if (values.phone.trim() && !isValidPhone(values.phone.trim())) {
+  /* Phone: optional on its own, but required once SMS consent is ticked, so a
+     consent record can never exist without the number it applies to. Consent
+     itself is still never required to submit the form. */
+  const phone = values.phone.trim();
+  if (values.smsConsent && !phone) {
+    errors.phone =
+      "Please add the mobile number you'd like SMS messages sent to, or untick SMS consent.";
+  } else if (phone && !isValidPhone(phone)) {
     errors.phone = "Please enter a valid phone number.";
   }
 
