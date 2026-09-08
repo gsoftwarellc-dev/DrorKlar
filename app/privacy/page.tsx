@@ -38,9 +38,9 @@ export default function PrivacyPage() {
       <ul>
         <li>
           <strong>Information you submit.</strong> When you complete the contact
-          form, I receive your name, email address, and message, along with any
-          optional details you choose to add such as your business name,
-          website, phone number, and the service you are interested in.
+          form, I receive your name, email address, phone number, and message,
+          along with any optional details you choose to add such as your
+          business name, website, and the service you are interested in.
         </li>
         <li>
           <strong>Information sent automatically.</strong> Like most websites,
@@ -76,19 +76,19 @@ export default function PrivacyPage() {
         list. It is a request for me to reply to your inquiry.
       </p>
       <p>
-        Only your name, email address, and message are required to send an
-        inquiry. Every other field may be left blank. A phone number is
-        required only if you choose to opt in to SMS messages, so that the
-        consent is tied to the number it applies to; if you do not opt in, you
-        can send an inquiry without giving a phone number at all.
+        Your name, email address, phone number, and message are required to
+        send an inquiry; the business name, website, and service fields are
+        optional and may be left blank. The phone number is collected so I can
+        reach you about your inquiry, and so that any SMS consent you give is
+        tied to the number it applies to.
       </p>
 
       <h2 id="phone-numbers-and-sms">Phone Numbers and SMS Communications</h2>
       <p>
         Providing a phone number by itself does not opt you in to text
-        messages. The phone field is only required when you tick the SMS
-        consent box, because a consent record must identify the number the
-        consent covers.
+        messages. Although the phone field is required to send an inquiry, SMS
+        consent is a separate choice: the consent box is never pre-selected,
+        and leaving it unticked means I will not text you.
       </p>
       <p>
         SMS consent is a separate, explicit choice. The SMS consent checkbox on
@@ -197,8 +197,9 @@ export default function PrivacyPage() {
           am required to keep.
         </li>
         <li>
-          <strong>Optional fields.</strong> You can leave optional fields blank,
-          including your phone number, as long as you are not opting in to SMS.
+          <strong>Optional fields.</strong> The business name, website, and
+          service fields are optional and may be left blank. Leaving the SMS
+          consent box unticked means you will not receive text messages.
         </li>
       </ul>
       <p>

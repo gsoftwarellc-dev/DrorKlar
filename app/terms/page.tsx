@@ -165,9 +165,11 @@ export default function TermsPage() {
         </li>
       </ul>
       <p>
-        Consent is recorded against the specific mobile number entered on the
-        contact form at the time consent is given, and messages are sent only
-        to that number.
+        A phone number is required to send an inquiry, and consent is recorded
+        against the specific number entered on the contact form at the time
+        consent is given. Messages are sent only to that number, and only if
+        you ticked the consent box &mdash; submitting the form with a phone
+        number but without ticking it does not opt you in.
       </p>
       <p>
         I only message people who gave consent directly to me. I do not treat
