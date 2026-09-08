@@ -6,7 +6,7 @@
  * place it appears.
  */
 
-const FALLBACK_URL = "https://drorklar.com";
+const FALLBACK_URL = "https://www.drorklar.com";
 
 /**
  * Resolves the public site URL from the environment.
