@@ -6,8 +6,10 @@ type SectionHeadingProps = {
   title: ReactNode;
   subtitle?: ReactNode;
   align?: "left" | "center";
-  /** Renders light-on-dark for the black CTA section. */
-  tone?: "dark" | "light";
+  /** "light" renders light-on-dark for the black CTA section.
+   *  "ink" keeps the dark-on-white layout but renders the eyebrow and
+   *  subtitle in pure black rather than grey. */
+  tone?: "dark" | "light" | "ink";
   /** Ties the heading to its section via aria-labelledby. */
   id?: string;
   className?: string;
@@ -24,6 +26,7 @@ export default function SectionHeading({
 }: SectionHeadingProps) {
   const isCentered = align === "center";
   const isLight = tone === "light";
+  const isInk = tone === "ink";
 
   return (
     <div
@@ -34,7 +37,7 @@ export default function SectionHeading({
           <p
             className={`mb-5 flex items-center gap-3 text-[0.6875rem] font-semibold uppercase tracking-[0.18em] ${
               isCentered ? "justify-center" : ""
-            } ${isLight ? "text-white/60" : "text-neutral-500"}`}
+            } ${isLight ? "text-white/60" : isInk ? "text-black" : "text-neutral-500"}`}
           >
             <span
               aria-hidden="true"
@@ -60,7 +63,7 @@ export default function SectionHeading({
         <Reveal delay={120}>
           <p
             className={`mt-5 text-pretty text-base leading-relaxed sm:text-lg ${
-              isLight ? "text-white/70" : "text-neutral-600"
+              isLight ? "text-white/70" : isInk ? "text-black" : "text-neutral-600"
             }`}
           >
             {subtitle}

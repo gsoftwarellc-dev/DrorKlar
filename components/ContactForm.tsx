@@ -148,13 +148,13 @@ export default function ContactForm() {
         <h3 className="mt-6 text-xl font-semibold tracking-tight text-black">
           Thanks for reaching out. Your message has been received.
         </h3>
-        <p className="mt-3 text-[0.9375rem] leading-relaxed text-neutral-600">
+        <p className="mt-3 text-[0.9375rem] leading-relaxed text-black">
           I review every inquiry personally and will get back to you by email.
         </p>
 
         {/* Only mentioned when the visitor actually opted in. */}
         {submittedWithSms ? (
-          <p className="mt-4 rounded-lg border border-neutral-200 bg-neutral-50 p-4 text-[0.8125rem] leading-relaxed text-neutral-600">
+          <p className="mt-4 rounded-lg border border-neutral-200 bg-neutral-50 p-4 text-[0.8125rem] leading-relaxed text-black">
             You opted in to receive SMS text messages about your inquiry. Message
             frequency may vary. Message and data rates may apply. Reply STOP to
             opt out or HELP for assistance.
@@ -299,7 +299,7 @@ export default function ContactForm() {
             disabled={isSubmitting}
           />
           <FieldError id="phone-error" message={errors.phone} />
-          <p id="phone-hint" className="mt-2 text-[0.75rem] leading-relaxed text-neutral-500">
+          <p id="phone-hint" className="mt-2 text-[0.75rem] leading-relaxed text-black">
             Providing a phone number does not opt you in to text messages.
           </p>
         </div>
@@ -354,7 +354,7 @@ export default function ContactForm() {
           Submitting the form without ticking this box does not opt anyone in.
          ------------------------------------------------------------------ */}
       <fieldset className="mt-8 rounded-xl border border-neutral-200 bg-neutral-50 p-5 sm:p-6">
-        <legend className="px-1 text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-neutral-500">
+        <legend className="px-1 text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-black">
           Optional &mdash; SMS Consent
         </legend>
 
@@ -372,13 +372,13 @@ export default function ContactForm() {
           />
           <label
             htmlFor="smsConsent"
-            className="cursor-pointer text-[0.8125rem] leading-relaxed text-neutral-600"
+            className="cursor-pointer text-[0.8125rem] leading-relaxed text-black"
           >
             {SMS_CONSENT_LABEL}
           </label>
         </div>
 
-        <p id="sms-legal" className="mt-4 border-t border-neutral-200 pt-4 text-[0.8125rem] text-neutral-600">
+        <p id="sms-legal" className="mt-4 border-t border-neutral-200 pt-4 text-[0.8125rem] text-black">
           View{" "}
           <Link
             href="/privacy"
@@ -444,7 +444,7 @@ export default function ContactForm() {
           )}
         </Button>
 
-        <p className="text-[0.75rem] leading-relaxed text-neutral-500">
+        <p className="text-[0.75rem] leading-relaxed text-black">
           Fields marked <span aria-hidden="true">*</span>
           <span className="sr-only">with an asterisk</span> are required.
         </p>

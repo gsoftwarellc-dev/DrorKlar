@@ -17,6 +17,7 @@ export default function Contact() {
           <div>
             <SectionHeading
               id="contact-heading"
+              tone="ink"
               eyebrow="Contact"
               title="Let's Talk About Your Business"
               subtitle="Have a question or a project in mind? Send me a message and I'll get back to you directly."
@@ -25,7 +26,7 @@ export default function Contact() {
             <Reveal delay={160}>
               <dl className="mt-10 space-y-6 border-t border-neutral-200 pt-8">
                 <div>
-                  <dt className="text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-neutral-500">
+                  <dt className="text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-black">
                     Email
                   </dt>
                   <dd className="mt-2">
@@ -38,7 +39,7 @@ export default function Contact() {
                   </dd>
                 </div>
                 <div>
-                  <dt className="text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-neutral-500">
+                  <dt className="text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-black">
                     Phone
                   </dt>
                   <dd className="mt-2">
@@ -51,10 +52,10 @@ export default function Contact() {
                   </dd>
                 </div>
                 <div>
-                  <dt className="text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-neutral-500">
+                  <dt className="text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-black">
                     Response
                   </dt>
-                  <dd className="mt-2 text-[0.9375rem] leading-relaxed text-neutral-600">
+                  <dd className="mt-2 text-[0.9375rem] leading-relaxed text-black">
                     I review each inquiry personally and reply by email.
                   </dd>
                 </div>

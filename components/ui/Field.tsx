@@ -30,7 +30,7 @@ export function FieldLabel({ htmlFor, children, required, optional }: LabelProps
       ) : null}
       {optional ? (
         /* neutral-500 keeps this legible at AA against white; lighter greys fail. */
-        <span className="ml-1.5 font-normal text-neutral-500">(optional)</span>
+        <span className="ml-1.5 font-normal text-black">(optional)</span>
       ) : null}
     </label>
   );
@@ -76,7 +76,7 @@ export function Select({ invalid, className = "", children, ...props }: SelectPr
         aria-hidden="true"
         viewBox="0 0 16 16"
         fill="none"
-        className="pointer-events-none absolute right-4 top-1/2 h-4 w-4 -translate-y-1/2 text-neutral-500"
+        className="pointer-events-none absolute right-4 top-1/2 h-4 w-4 -translate-y-1/2 text-black"
       >
         <path
           d="m4 6 4 4 4-4"

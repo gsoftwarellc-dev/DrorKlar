@@ -14,20 +14,21 @@ export default function About() {
         <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
           <SectionHeading
             id="about-heading"
+            tone="ink"
             eyebrow="About"
             title="A Personal Approach to Digital Growth"
           />
 
           <div className="max-w-2xl space-y-6">
             <Reveal>
-              <p className="text-pretty text-base leading-relaxed text-neutral-600 sm:text-lg">
+              <p className="text-pretty text-base leading-relaxed text-black sm:text-lg">
                 I&rsquo;m Dror Klar, an independent digital marketing specialist
                 focused on helping businesses build a stronger digital presence
                 and generate meaningful opportunities online.
               </p>
             </Reveal>
             <Reveal delay={80}>
-              <p className="text-pretty text-base leading-relaxed text-neutral-600 sm:text-lg">
+              <p className="text-pretty text-base leading-relaxed text-black sm:text-lg">
                 I believe effective marketing should be clear, measurable, and
                 aligned with real business goals. I work directly with each
                 client, from understanding the challenge to developing and

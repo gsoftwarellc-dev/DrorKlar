@@ -44,7 +44,7 @@ export default function Hero() {
             </Reveal>
 
             <Reveal delay={140}>
-              <p className="mt-7 max-w-lg text-pretty text-base leading-relaxed text-neutral-600 sm:text-lg">
+              <p className="mt-7 max-w-lg text-pretty text-base leading-relaxed text-black sm:text-lg">
                 I work directly with businesses to improve their online
                 presence, generate qualified leads, and create digital
                 experiences designed to convert visitors into customers.
@@ -77,7 +77,7 @@ export default function Hero() {
             </Reveal>
 
             <Reveal delay={280}>
-              <p className="mt-8 border-t border-neutral-200 pt-6 text-sm text-neutral-500">
+              <p className="mt-8 border-t border-neutral-200 pt-6 text-sm text-black">
                 Personal strategy. Direct communication. Focused execution.
               </p>
             </Reveal>
