@@ -51,14 +51,6 @@ export default function Contact() {
                     </a>
                   </dd>
                 </div>
-                <div>
-                  <dt className="text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-black">
-                    Response
-                  </dt>
-                  <dd className="mt-2 text-[0.9375rem] leading-relaxed text-black">
-                    I review each inquiry personally and reply by email.
-                  </dd>
-                </div>
               </dl>
             </Reveal>
           </div>
