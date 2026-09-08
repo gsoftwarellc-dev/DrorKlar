@@ -149,7 +149,7 @@ export default function ContactForm() {
           Thanks for reaching out. Your message has been received.
         </h3>
         <p className="mt-3 text-[0.9375rem] leading-relaxed text-black">
-          I review every inquiry personally and will get back to you by email.
+          I review every inquiry personally and will get back to you shortly.
         </p>
 
         {/* Only mentioned when the visitor actually opted in. */}
