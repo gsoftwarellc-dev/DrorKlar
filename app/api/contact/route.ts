@@ -169,7 +169,7 @@ export async function POST(request: Request) {
     /* =================================================================
        ▸ CONNECT CRM HERE
        -----------------------------------------------------------------
-       Push the lead to a CRM (HubSpot, GoHighLevel, Pipedrive…). Map
+       Push the inquiry to a CRM (HubSpot, GoHighLevel, Pipedrive…). Map
        `submission.smsConsent`, `smsConsentTimestamp` and
        `smsDisclosureVersion` onto the contact record so the opt-in is
        auditable. Do NOT mark a contact SMS-subscribed when smsConsent

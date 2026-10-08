@@ -46,7 +46,7 @@ export default function Hero() {
             <Reveal delay={140}>
               <p className="mt-7 max-w-lg text-pretty text-base leading-relaxed text-black sm:text-lg">
                 I work directly with businesses to improve their online
-                presence, generate qualified leads, and create digital
+                presence, reach more customers, and create digital
                 experiences designed to convert visitors into customers.
               </p>
             </Reveal>

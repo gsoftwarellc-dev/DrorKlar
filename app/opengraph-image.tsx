@@ -66,8 +66,8 @@ export default function OpengraphImage() {
               maxWidth: "900px",
             }}
           >
-            Independent digital marketing — websites, advertising, and lead
-            generation.
+            Independent digital marketing — websites, advertising, and local
+            marketing.
           </div>
         </div>
 

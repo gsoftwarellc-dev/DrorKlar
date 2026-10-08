@@ -26,8 +26,8 @@ export default function Footer() {
             </p>
             <p className="mt-6 max-w-xs text-[0.8125rem] leading-relaxed text-black">
               Independent digital marketing support for businesses that want a
-              stronger online presence — websites, advertising, and lead
-              generation.
+              stronger online presence — websites, advertising, and local
+              marketing.
             </p>
           </div>
 

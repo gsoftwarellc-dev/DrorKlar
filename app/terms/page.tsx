@@ -69,7 +69,7 @@ export default function TermsPage() {
       </p>
       <p>
         I do not guarantee any specific result, including any particular number
-        of leads, conversions, sales, revenue, return on investment, search
+        of inquiries, conversions, sales, revenue, return on investment, search
         engine ranking, or advertising cost. Any examples, projections, or
         estimates discussed are illustrative only and are not promises of
         performance.
@@ -173,7 +173,7 @@ export default function TermsPage() {
       </p>
       <p>
         I only message people who gave consent directly to me. I do not treat
-        contacts obtained from purchased, rented, scraped, or third-party lead
+        contacts obtained from purchased, rented, scraped, or third-party contact
         lists as having opted in to SMS, and consent given to another business
         is never treated as consent to receive messages from me.
       </p>

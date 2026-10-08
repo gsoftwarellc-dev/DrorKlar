@@ -16,7 +16,7 @@ export default function Industries() {
             id="industries-heading"
             eyebrow="Who I Work With"
             title="Built for Ambitious Businesses"
-            subtitle="I work with businesses that want to strengthen their digital presence, improve lead generation, or build a more effective online customer-acquisition system."
+            subtitle="I work with businesses that want to strengthen their digital presence, reach more customers, or make their website and advertising work better together."
           />
 
           {/* Positioning only — these are business types I work with, not a client list. */}

@@ -41,7 +41,7 @@ export const site = {
 
   title: "Dror Klar | Digital Marketing Specialist",
   description:
-    "Dror Klar is an independent digital marketing specialist helping businesses improve their online presence through websites, advertising, lead generation, and digital strategy.",
+    "Dror Klar is an independent digital marketing specialist helping businesses improve their online presence through websites, advertising, local marketing, and digital strategy.",
 
   // Primary business email. Inquiries and legal contact both use this.
   email: "hello@drorklar.com",
@@ -81,14 +81,14 @@ export const services = [
   {
     title: "Meta Advertising",
     description:
-      "Facebook and Instagram advertising strategies designed to generate awareness, inquiries, and qualified leads.",
+      "Facebook and Instagram advertising strategies designed to build awareness and bring in customer inquiries.",
     value: "Meta Ads",
   },
   {
-    title: "Lead Generation",
+    title: "Analytics & Reporting",
     description:
-      "Digital lead-generation systems that help businesses create more opportunities from their online presence.",
-    value: "Lead Generation",
+      "Clear tracking and reporting that show how your website and ads are performing, so decisions are based on real data.",
+    value: "Analytics & Reporting",
   },
   {
     title: "Local Marketing",

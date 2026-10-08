@@ -110,7 +110,7 @@ export default function PrivacyPage() {
           purposes.
         </strong>{" "}
         This applies to all categories of third parties, including affiliates
-        and lead buyers. Mobile information may be shared only with the service
+        and data brokers. Mobile information may be shared only with the service
         providers that help me deliver the messages you have consented to
         receive, such as a messaging or CRM provider acting on my behalf, and
         those providers are not permitted to use it for their own marketing.
